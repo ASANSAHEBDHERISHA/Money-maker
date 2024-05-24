@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Tracker</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Money Tracker</h1>
+  <a href="/add-transaction">Add Transaction</a>
+  <ul>
+    <% transactions.forEach(transaction => { %>
+      <li><%= transaction.date.toDateString() %>: <%= transaction.type %> - $<%= transaction.amount %> (<%= transaction.description %>)</li>
+    <% }) %>
+  </ul>
+</body>
+</html>
